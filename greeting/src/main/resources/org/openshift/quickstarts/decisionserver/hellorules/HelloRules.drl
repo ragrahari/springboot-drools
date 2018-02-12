@@ -8,7 +8,7 @@ rule "greet master"
     when
         person : Person( name == "rettori")
     then
-        String salutation = "Hello " + person.getName() + "! you really rock!";
+        String salutation = "Hello " + person.getName() + "! you really rock and thats the ultimate truth!";
         insert(new Greeting(salutation));
 end
 rule "greet strangers"
