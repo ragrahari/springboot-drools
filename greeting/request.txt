@@ -1,9 +1,0 @@
-<batch-execution lookup="HelloRulesSession">
-  <insert>
-      <org.openshift.quickstarts.decisionserver.hellorules.Person>
-            <name>rettori</name>
-                </org.openshift.quickstarts.decisionserver.hellorules.Person>
-                  </insert>
-                    <fire-all-rules/>
-                      <query out-identifier="greetings" name="get greeting"/>
-                      </batch-execution>
