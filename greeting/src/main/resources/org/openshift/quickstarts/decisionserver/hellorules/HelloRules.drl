@@ -1,0 +1,20 @@
+package org.openshift.quickstarts.decisionserver.hellorules
+
+query "get greeting"()
+    greeting : Greeting()
+end
+
+rule "greet master"
+    when
+        person : Person( name == "rettori")
+    then
+        String salutation = "Hello " + person.getName() + "! you really rock and thats the ultimate truth!";
+        insert(new Greeting(salutation));
+end
+rule "greet strangers"
+    when
+        person : Person( name != "rettori")
+    then
+        String salutation = "work hook work " + person.getName();
+        insert(new Greeting(salutation));
+end
