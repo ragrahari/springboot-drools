@@ -15,6 +15,6 @@ rule "greet strangers"
     when
         person : Person( name != "rettori")
     then
-        String salutation = "more changes in biz central " + person.getName();
+        String salutation = "more changes in biz central, again by " + person.getName();
         insert(new Greeting(salutation));
 end
