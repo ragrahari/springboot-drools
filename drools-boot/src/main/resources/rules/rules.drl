@@ -12,5 +12,5 @@ rule "Offer for Gold"
 	when 
 		productObject: Product(type=="gold")
 	then
-		productObject.setDiscount(20);
+		productObject.setDiscount(35);
 	end
