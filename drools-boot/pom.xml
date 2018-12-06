@@ -74,7 +74,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>com.SpringBootApp</mainClass>
+							<mainClass>com.crossvale.SpringBootDroolsEntryApp</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
