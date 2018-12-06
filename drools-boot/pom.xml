@@ -15,7 +15,6 @@
 		<kie.version>6.1.0.Final</kie.version>
 	</properties>
 
-
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -33,21 +32,40 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 
 		<dependency>
 			<groupId>org.kie</groupId>
 			<artifactId>kie-ci</artifactId>
 			<version>${kie.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.drools/drools-decisiontables -->
+		<dependency>
+			<groupId>org.drools</groupId>
+			<artifactId>drools-decisiontables</artifactId>
+			<version>${kie.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.kie</groupId>
+			<artifactId>kie-api</artifactId>
+			<version>${kie.version}</version>
 		</dependency>
 
 	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			
+
 			<plugin>
 				<!-- Build an executable JAR -->
 				<groupId>org.apache.maven.plugins</groupId>
@@ -56,14 +74,15 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>com.crossvale.SpringBootDroolsEntryApp</mainClass>
+							<mainClass>com.SpringBootApp</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
 			</plugin>
+
 		</plugins>
 	</build>
-	
+
 	<packaging>jar</packaging>
 
 </project>
