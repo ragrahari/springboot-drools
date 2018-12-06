@@ -22,6 +22,7 @@ public class JewelleryShopService {
 		KieSession kieSession = kieContainer.newKieSession("rulesSession");
 		kieSession.insert(product);
 		kieSession.fireAllRules();
+		System.out.println("Fired a rule for: "+product.getType()+" = "+product.getDiscount());
 		kieSession.dispose();
 		return product;
 	}
