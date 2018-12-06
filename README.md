@@ -1,3 +1,2 @@
-# brms-ocp-demo
-BRMS on OCP Demo
-# making some unrelated changes on GitHub to trigger a build
+# Drools Spring Boot Test App
+This is a test spring boot app that uses Drools
