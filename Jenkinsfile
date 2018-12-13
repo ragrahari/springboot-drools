@@ -1,3 +1,3 @@
-node ('maven') {
+node {
   sh "mvn spring-boot:run"
 }
