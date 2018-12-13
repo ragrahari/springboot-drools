@@ -1,1 +1,1 @@
-sh "mvn spring-boot:run"
+sh "mvn clean package"
